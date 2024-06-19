@@ -32,6 +32,7 @@
             Email is Invalid
           </mat-error>
         </mat-form-field>
+
         <mat-form-field>
           <mat-label>Password</mat-label>
           <input
@@ -62,18 +63,16 @@
             Password is Invalid
           </mat-error>
         </mat-form-field>
-        <button
-          mat-flat-button
-          [disabled]="f.invalid"
-          type="submit"
-          class="auth-btn"
-        >
+
+        <button mat-flat-button [disabled]="f.invalid" type="submit">
           <mat-icon fontIcon="login"></mat-icon>
           Login
         </button>
+
         <a class="routerPara text-center">
           or <span class="routerSpan" routerLink="/signup">Signup</span>
         </a>
+        
       </form>
     </div>
   </div>

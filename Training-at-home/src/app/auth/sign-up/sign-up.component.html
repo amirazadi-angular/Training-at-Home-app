@@ -1,1 +1,130 @@
-<p>sign-up works!</p>
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+  <div class="row">
+    <div class="formHolder" fxLayout="column" fxLayoutAlign="center center">
+      <img
+        width="200"
+        class="img_fluid text-center"
+        src="../../../assets/trainingathomelogo.png"
+        alt="Logo for taining at home"
+      />
+      <form
+        #f="ngForm"
+        (ngSubmit)="onSubmit(f)"
+        class="example-form"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+      >
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input
+            type="email"
+            matInput
+            ngModel
+            #email="ngModel"
+            name="email"
+            email
+            required
+            placeholder="Ex.pat@Example.com"
+          />
+          <mat-error *ngIf="email.hasError('required')">
+            Email is Required
+          </mat-error>
+          <mat-error *ngIf="!email.hasError('required')">
+            Eamil is invalid
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input
+            matInput
+            [matDatepicker]="picker"
+            ngModel
+            #datePicker="ngModel"
+            name="datePicker"
+          />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input
+            [type]="hide() ? 'password' : 'text'"
+            matInput
+            placeholder="Enter Your Password"
+            required
+            ngModel
+            password
+            name="password"
+            minlength="6"
+            #password="ngModel"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+          <mat-hint align="end"> {{ password.value.length }} / 6 </mat-hint>
+          <mat-error *ngIf="password.hasError('required')">
+            Password is Required
+          </mat-error>
+          <mat-error *ngIf="!password.hasError('required')">
+            Password is Invalid
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Repeat password</mat-label>
+          <input
+            [type]="hide() ? 'password' : 'text'"
+            matInput
+            placeholder="Enter Your Password"
+            required
+            ngModel
+            password
+            name="Currentpassword"
+            minlength="6"
+            #Currentpassword="ngModel"
+          />
+          <button
+            mat-icon-button
+            matSuffix
+            (click)="clickEvent($event)"
+            [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="hide()"
+          >
+            <mat-icon>{{ hide() ? "visibility_off" : "visibility" }}</mat-icon>
+          </button>
+          <mat-hint align="end"> {{ password.value.length }} / 6 </mat-hint>
+          <mat-error *ngIf="password.hasError('required')">
+            Password is Required
+          </mat-error>
+          <mat-error *ngIf="!password.hasError('required')">
+            Password is Invalid
+          </mat-error>
+          <mat-hint *ngIf="password.value !== Currentpassword.value">
+            Passwords are not same
+          </mat-hint>
+        </mat-form-field>
+
+        <button
+          type="submit"
+          mat-flat-button
+          [disabled]="f.invalid || password.value !== Currentpassword.value"
+        >
+          <mat-icon fontIcon="login"></mat-icon>
+          Signup
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

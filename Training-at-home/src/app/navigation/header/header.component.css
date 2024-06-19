@@ -9,7 +9,7 @@ img {
   text-align: center !important;
   justify-content: center !important;
   font-size: 14px;
-  flex-grow: 6;
+  flex-grow: 11;
   > button {
     margin-right: 4px;
     display: inline-flex;
