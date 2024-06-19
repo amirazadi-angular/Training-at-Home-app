@@ -1,0 +1,260 @@
+#Text-holder {
+  padding-top: 90px !important;
+  padding-right: 130px !important;
+  background: url(../../assets/backgroundmain-row.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+#Text-holder p {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 23px;
+}
+.container-fluid {
+  padding: 30px;
+}
+.example-button-row {
+  text-align: left !important;
+  margin-top: 50px;
+}
+#button-home-contact {
+  padding: 25px;
+  background-color: #f0eded;
+  color: #000000;
+  width: 200px;
+  height: 4.9em;
+  border-radius: 20px !important;
+  transition: all 0.6s ease;
+  padding: 25px;
+  margin-right: 40px;
+}
+#button-home-contact:hover {
+  background-color: #212121;
+  cursor: pointer;
+  color: #ffffff;
+  box-shadow: rgba(48, 48, 49, 0.281) 0px 48px 100px 0px;
+}
+
+#button-home-contact mat-icon {
+  transition: all 0.6s ease;
+}
+#button-home-contact:hover mat-icon {
+  transform: translateX(4px);
+}
+
+#button-home-started {
+  background-color: #212121;
+  color: #fff;
+  width: 200px;
+  height: 4.9em;
+  border-radius: 20px !important;
+  transition: all 0.6s ease;
+  padding: 25px !important;
+  margin-right: 40px;
+  box-shadow: rgba(48, 48, 49, 0.281) 0px 48px 100px 0px;
+}
+
+#button-home-started:hover {
+  background-color: #e97313;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+#button-home-started mat-icon {
+  transition: all 0.6s ease;
+}
+
+#button-home-started:hover mat-icon {
+  transform: translateX(5px);
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #Text-holder {
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  #button-home-started {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  #button-home-contact {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  .example-button-row {
+    text-align: center;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  #Text-holder {
+    padding-top: 10px !important;
+    padding-right: 0 !important;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  #button-home-started {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  #button-home-contact {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  .example-button-row {
+    text-align: center;
+  }
+}
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+  #button-home-started {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  #button-home-contact {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  .example-button-row {
+    text-align: center;
+  }
+}
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #button-home-started {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  #button-home-contact {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  .example-button-row {
+    text-align: center;
+  }
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  #button-home-started {
+    background-color: #212121;
+    color: #fff;
+    width: 200px;
+    height: 4.9em;
+    border-radius: 7px;
+    transition: all 0.6s ease;
+    padding: 25px;
+    margin-right: 40px;
+    box-shadow: rgba(48, 48, 49, 0.281) 0px 48px 100px 0px;
+  }
+  #button-home-contact {
+    padding: 25px;
+    background-color: #f0eded;
+    color: #000000;
+    width: 200px;
+    height: 4.9em;
+    border-radius: 7px;
+    transition: all 0.6s ease;
+    padding: 25px;
+    margin-right: 40px;
+  }
+  #Text-holder {
+    padding-top: 90px !important;
+    padding-right: 130px !important;
+  }
+}
+/* Large screens ----------- */
+@media only screen and (min-width: 1824px) {
+  #button-home-started {
+    background-color: #212121;
+    color: #fff;
+    width: 200px;
+    height: 4.9em;
+    border-radius: 7px;
+    transition: all 0.6s ease;
+    padding: 25px;
+    margin-right: 40px;
+    box-shadow: rgba(48, 48, 49, 0.281) 0px 48px 100px 0px;
+  }
+  #button-home-contact {
+    padding: 25px;
+    background-color: #f0eded;
+    color: #000000;
+    width: 200px;
+    height: 4.9em;
+    border-radius: 7px;
+    transition: all 0.6s ease;
+    padding: 25px;
+    margin-right: 40px;
+  }
+  #Text-holder {
+    padding-top: 90px !important;
+    padding-right: 130px !important;
+  }
+}
+/* iPhone 4 - 5s ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+  only screen and (min-device-pixel-ratio: 1.5) {
+  #Text-holder {
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  #button-home-started {
+    width: 130px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 8px;
+  }
+  #button-home-contact {
+    width: 130px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 8px;
+  }
+  .example-button-row {
+    text-align: center;
+  }
+}
+@media only screen and (max-device-width: 667px) {
+  .col-md-6 {
+    padding-top: 10px;
+    padding-right: 0;
+  }
+  #button-home-started {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  #button-home-contact {
+    width: 140px;
+    padding: 10px;
+    height: 3.9;
+    margin-right: 12px;
+  }
+  .example-button-row {
+    text-align: center;
+  }
+}
+#Grid-holder{
+  padding-top: 50px;
+}

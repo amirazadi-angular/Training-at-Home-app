@@ -1,0 +1,18 @@
+mat-grid-tile {
+  border-radius: 20px !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: aliceblue !important;
+  font-weight: 800;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  text-shadow: 2px 2px 7px rgba(133, 133, 77, 0.73);
+  filter: grayscale(90%);
+  transition: 1s;
+}
+mat-grid-tile:hover {
+  filter: none;
+}
+mat-grid-tile.mat-grid-tile.ng-star-inserted {
+    margin: 10px !important;
+}
