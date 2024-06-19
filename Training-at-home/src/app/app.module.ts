@@ -16,7 +16,8 @@ import { SidebarComponent } from './navigation/sidebar/sidebar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouteGridComponent } from './main/route-grid/route-grid.component';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,9 @@ import { RouteGridComponent } from './main/route-grid/route-grid.component';
     BrowserModule,
     AppRoutingModule,
     angularMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideAnimationsAsync()

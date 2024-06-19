@@ -38,3 +38,11 @@ p{
   font-family: cursive;
   color: #3e3a3ab5;
 }
+button:disabled{
+  cursor: no-drop !important;
+}
+.mat-mdc-text-field-wrapper {
+  width: 100%;
+  z-index: 0;
+  background: none !important;
+}

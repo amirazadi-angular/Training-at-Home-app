@@ -1,12 +1,5 @@
 import { Component } from '@angular/core';
-import { MatGridListModule } from '@angular/material/grid-list';
-
-export interface Tile {
-  cols: number;
-  rows: number;
-  text: string;
-  style: string;
-}
+import {Tile} from  '../../interface/routeimageMain.interface'
 
 @Component({
   selector: 'app-route-grid',
