@@ -1,4 +1,4 @@
-import { Component, Signal } from '@angular/core';
+import { Component, EventEmitter, Output, Signal } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -21,4 +21,10 @@ export class HeaderComponent {
       route: '/dashboard',
     },
   ];
+
+  @Output() sidebarToggle = new EventEmitter<void>();
+
+  onToggleSidebar() {
+    this.sidebarToggle.emit();
+  }
 }

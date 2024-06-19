@@ -3,6 +3,7 @@
 html,
 body {
   height: 100%;
+  background: #F5F5F5 !important;
 }
 body {
   margin: 0;
