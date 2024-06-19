@@ -47,3 +47,19 @@ mat-form-field {
   width: 300px !important;
   background-color: none !important;
 }
+
+html .mat-accent {
+  --mdc-circular-progress-active-indicator-color: #f54611;
+}
+.mat-datepicker-content {
+  display: block;
+  background-color: #fd5e21f5 !important;
+  color: var(--mat-datepicker-calendar-container-text-color);
+  box-shadow: var(--mat-datepicker-calendar-container-elevation-shadow);
+  border-radius: var(--mat-datepicker-calendar-container-shape);
+  border-radius: 20px !important;
+  & .mat-calendar-body-selected {
+    background-color: #CFCCCC;
+    color: var(--mat-datepicker-calendar-date-selected-state-text-color);
+}
+}
