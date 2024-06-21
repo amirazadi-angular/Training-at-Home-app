@@ -1,1 +1,20 @@
-<p>sidenav works!</p>
+<div class="container" fxFlexLayout="column" fxLayoutAlign="center center">
+  <div class="row" fxFlexLayout="column" fxLayoutAlign="center center">
+    <div class="Avatar" fxFlexLayout="column" fxLayoutAlign="center center">
+      <img width="100px" height="100px" [src]="imgUrl" alt="profile photo" />
+    </div>
+    <div class="Level">Level : {{ level }}</div>
+    <div class="Informations">Hi {{ name }}</div>
+
+    <mat-nav-list>
+      <a
+        [routerLink]="[item.route]"
+        mat-list-item
+        *ngFor="let item of menuItem()"
+      >
+        <mat-icon matListItemIcon>{{ item.icon }}</mat-icon>
+        <span matListItemTitle>{{ item.label }}</span>
+      </a>
+    </mat-nav-list>
+  </div>
+</div>
