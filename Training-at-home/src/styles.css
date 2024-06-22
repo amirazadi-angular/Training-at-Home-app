@@ -85,8 +85,8 @@ html .mat-accent {
 .mdc-line-ripple:active {
   color: #f54611 !important;
 }
-div#mat-select-0-panel {
-  background: rgba(246, 93, 0, 0.72);
+#mat-select-0-panel {
+  background: rgba(246, 93, 0, 0.72) !important;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -97,16 +97,15 @@ div#mat-select-0-panel {
 .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
   stroke: rgb(255, 102, 0) !important;
 }
-#mat-mdc-dialog-0{
-  width: 350px;
-  background: rgba(246, 93, 0, 0.72);
-  border-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.9px);
-  -webkit-backdrop-filter: blur(5.9px);
-}
-.mat-mdc-dialog-surface{
+
+.mat-mdc-dialog-surface {
+  width: 350px !important;
   padding: 20px;
   background-color: transparent !important;
   border-radius: 20px !important;
+  background: rgba(246, 93, 0, 0.72) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5.9px) !important;
+  -webkit-backdrop-filter: blur(5.9px) !important;
 }
