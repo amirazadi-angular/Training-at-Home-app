@@ -15,6 +15,8 @@ import { MatList, MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatSelectModule} from '@angular/material/select';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   imports: [
@@ -34,7 +36,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatGridListModule,
     MatCardModule,
     MatList,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule,
+    MatDialogModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -53,7 +57,9 @@ import {MatSelectModule} from '@angular/material/select';
     MatGridListModule,
     MatCardModule,
     MatList,
-    MatSelectModule
+    MatSelectModule,
+    MatProgressSpinnerModule,
+    MatDialogModule
   ],
 })
 export class angularMaterialModule {}

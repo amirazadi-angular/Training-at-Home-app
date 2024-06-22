@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-new-training',
@@ -13,4 +13,10 @@ export class NewTrainingComponent {
     'iron',
     'sit-up',
   ];
+
+  @Output() startTraining = new EventEmitter<void>();
+
+  onStartTraining() {
+    this.startTraining.emit();
+  }
 }

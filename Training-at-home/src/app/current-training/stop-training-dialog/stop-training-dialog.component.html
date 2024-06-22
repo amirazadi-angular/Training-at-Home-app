@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="row">
+    <h2 mat-dialog-title>Are you sure about stopping the exercise?</h2>
+    <mat-dialog-content
+      > Obviously, by confirming the stop of the exercise, you are no longer able
+      to continue this exercise. </mat-dialog-content
+    >
+    <mat-dialog-actions fxLayoutAlign="center center">
+      <button class="cancelButton" mat-button [mat-dialog-close]="false">Cancel</button>
+      <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+      <button class="stopButton" mat-button [mat-dialog-close]="true">Stop</button>
+    </mat-dialog-actions>
+  </div>
+</div>

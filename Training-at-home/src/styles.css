@@ -86,11 +86,27 @@ html .mat-accent {
   color: #f54611 !important;
 }
 div#mat-select-0-panel {
-  /* From https://css.glass */
   background: rgba(246, 93, 0, 0.72);
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5.9px);
   -webkit-backdrop-filter: blur(5.9px);
+}
+.mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle,
+.mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
+  stroke: rgb(255, 102, 0) !important;
+}
+#mat-mdc-dialog-0{
+  width: 350px;
+  background: rgba(246, 93, 0, 0.72);
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+}
+.mat-mdc-dialog-surface{
+  padding: 20px;
+  background-color: transparent !important;
+  border-radius: 20px !important;
 }

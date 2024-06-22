@@ -17,6 +17,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { RouteGridComponent } from './main/route-grid/route-grid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CurrentTrainingComponent } from './current-training/current-training.component';
+import { StopTrainingDialogComponent } from './current-training/stop-training-dialog/stop-training-dialog.component';
  
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SidebarComponent,
     DashboardComponent,
     RouteGridComponent,
+    CurrentTrainingComponent,
+    StopTrainingDialogComponent,
   ],
   imports: [
     BrowserModule,

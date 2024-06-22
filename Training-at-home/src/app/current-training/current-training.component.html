@@ -1,0 +1,21 @@
+<div class="container" fxLayout="column" fxLayoutAlign="center center">
+  <div
+    class="row"
+    fxLayout="column"
+    fxLayoutAlign="center center"
+    fxLayoutGap="30px"
+  >
+    <mat-card appearance="outlined" fxFlex.xs="100%" fxFlex.sm="100%">
+      <mat-card-header fxLayoutAlign="center center">
+        <mat-progress-spinner [value]="progress"></mat-progress-spinner>
+      </mat-card-header>
+      <mat-card-content>
+        <h2>Progress % {{progress}} </h2>
+        <p>Keep going and don't give up</p>
+      </mat-card-content>
+      <mat-card-actions fxLayoutAlign="center center">
+        <button (click)="stopProgress()" class="stopButton" mat-button>Stop</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
