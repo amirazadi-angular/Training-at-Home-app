@@ -13,6 +13,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatList, MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatCardModule} from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+
 @NgModule({
   imports: [
     MatSlideToggleModule,
@@ -29,6 +32,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatMenuModule,
     MatListModule,
     MatGridListModule,
+    MatCardModule,
+    MatList,
+    MatSelectModule
   ],
   exports: [
     MatSlideToggleModule,
@@ -45,6 +51,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatMenuModule,
     MatListModule,
     MatGridListModule,
+    MatCardModule,
+    MatList,
+    MatSelectModule
   ],
 })
 export class angularMaterialModule {}

@@ -1,6 +1,6 @@
 <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav role="navigation">
-    <app-sidenav ></app-sidenav>
+    <app-sidenav (toCliseSidebar)="sidenav.toggle()"></app-sidenav>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-header (sidebarToggle)="sidenav.toggle()"></app-header>

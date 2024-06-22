@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, EventEmitter, Output, signal } from '@angular/core';
 import { Imenu } from '../../interface/navarItem.interface';
 
 @Component({
@@ -9,18 +9,23 @@ import { Imenu } from '../../interface/navarItem.interface';
 export class SidenavComponent {
   imgUrl: string = 'https://mdbcdn.b-cdn.net/img/new/avatars/8.webp';
   name: string = 'Amirhossein';
-  level : string = 'Beginner';
+  level: string = 'Beginner';
 
   menuItem = signal<Imenu[]>([
+    {
+      icon: 'home',
+      label: 'Home',
+      route: '',
+    },
     {
       icon: 'dashboard',
       label: 'Dashbord',
       route: 'dashboard',
     },
     {
-      icon: 'video_library',
-      label: 'Content',
-      route: 'video_library',
+      icon: 'fitness_center',
+      label: 'Training',
+      route: 'training',
     },
     {
       icon: 'analytics',
@@ -28,14 +33,15 @@ export class SidenavComponent {
       route: 'analytics',
     },
     {
-      icon: 'comment',
-      label: 'Comments',
-      route: 'comments',
-    },
-    {
-      icon:'settings',
+      icon: 'settings',
       label: 'Setting',
-      route:'setting'
-    }
+      route: 'setting',
+    },
   ]);
+
+  @Output() toCliseSidebar = new EventEmitter<void>();
+
+  toCloseSidebar() {
+    this.toCliseSidebar.emit();
+  }
 }

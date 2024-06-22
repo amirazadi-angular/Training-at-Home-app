@@ -64,3 +64,15 @@ html .mat-accent {
     color: var(--mat-datepicker-calendar-date-selected-state-text-color);
 }
 }
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #333 !important;
+  font-weight: 700 !important;
+}
+.mat-mdc-tab .mdc-tab-indicator__content--underline {
+  border-color: #df6c0e !important;
+  border-radius: 20px;
+}
+.mat-mdc-tab.mdc-tab--active{
+  background-color: #dad8d654 !important;
+}

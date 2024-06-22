@@ -19,6 +19,7 @@
 .Level {
   width: 116px;
   font-size: 12px;
+  font-weight: 600;
   text-align: center;
   background: #f3760c;
   border-top-right-radius: 50px;

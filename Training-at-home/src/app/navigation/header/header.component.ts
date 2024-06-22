@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, Signal } from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
   selector: 'app-header',

@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './new-training.component.css'
 })
 export class NewTrainingComponent {
-
+  trainingArray : string[] = [
+    "Push-Ups",
+    "jogging",
+    "exercise bike",
+    "iron",
+    "sit-up"
+  ]
 }
