@@ -85,13 +85,13 @@ html .mat-accent {
 .mdc-line-ripple:active {
   color: #f54611 !important;
 }
-#mat-select-0-panel {
+div.mat-mdc-select-panel{
   background: rgba(246, 93, 0, 0.72) !important;
-  border-bottom-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.9px);
-  -webkit-backdrop-filter: blur(5.9px);
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5.9px) !important;
+  -webkit-backdrop-filter: blur(5.9px) !important;
 }
 .mat-mdc-progress-spinner .mdc-circular-progress__determinate-circle,
 .mat-mdc-progress-spinner .mdc-circular-progress__indeterminate-circle-graphic {
