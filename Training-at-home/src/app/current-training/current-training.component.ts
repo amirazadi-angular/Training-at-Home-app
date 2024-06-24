@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StopTrainingDialogComponent } from './stop-training-dialog/stop-training-dialog.component';
+import { TrainingService } from '../training/training.service';
 
 @Component({
   selector: 'app-current-training',
@@ -12,19 +13,24 @@ export class CurrentTrainingComponent implements OnInit {
   intervalId: any;
   @Output() dialogEvent = new EventEmitter();
 
-  constructor(private dialog: MatDialog) { }
+  trainigName !: string;
+  constructor(private dialog: MatDialog, private trainingService: TrainingService) { }
 
   ngOnInit(): void {
     this.startOrResume();
+    this.trainigName = this.trainingService.getRuningExercise().name!;
   }
   startOrResume() {
+    const increment = this.trainingService.getRuningExercise().duration! / 100 * 1000;
     this.intervalId = setInterval(() => {
-      this.progress += 5;
+      this.progress += 1;
       if (this.progress >= 100) {
+        this.trainingService.compliteExercise();
         clearInterval(this.intervalId);
       }
-    }, 1000);
+    }, increment);
   }
+
   stopProgress() {
     clearInterval(this.intervalId);
     const dialogRef = this.dialog.open(StopTrainingDialogComponent, {
@@ -34,7 +40,7 @@ export class CurrentTrainingComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe((res) => {
       if (res) {
-        this.dialogEvent.emit();
+        this.trainingService.cancelExercise(this.progress);
       } else {
         this.startOrResume();
       }

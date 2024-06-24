@@ -3,9 +3,9 @@ import { Iexercise } from '../interface/exercise.interface';
 
 export class TrainingService {
 
-    exerciseChange = new Subject<Iexercise>();
+    exerciseChange = new Subject<Iexercise | null>();
 
-    private runningExercises!: Iexercise;
+    private runningExercises!: Iexercise | null;
 
     private availableExercise: Iexercise[] = [
         {
@@ -21,6 +21,7 @@ export class TrainingService {
             id: "Burpess", name: "Burpess", duration: 60, calories: 8,
         }
     ];
+    private complitedExerciseArray: Iexercise[] = [];
 
     getAvailabeExercises() {
         return this.availableExercise.slice();
@@ -30,6 +31,29 @@ export class TrainingService {
         this.runningExercises = this.availableExercise.find(
             (exe) => exe.id === selectedId
         )!;
-        this.exerciseChange.next({...this.runningExercises})
+        this.exerciseChange.next({ ...this.runningExercises })
+    }
+
+    getRuningExercise() {
+        return { ...this.runningExercises }
+    }
+
+    cancelExercise(progress: number) {
+        this.runningExercises = null;
+        this.exerciseChange.next(null);
+        this.complitedExerciseArray.push
+            ({
+                ...this.runningExercises!, date: new Date(), state: 'canceled',
+                duration: this.runningExercises!.duration! * (progress / 100),
+                calories: this.runningExercises!.duration! * (progress / 100)
+            });
+    }
+
+    compliteExercise() {
+        this.complitedExerciseArray.push({
+            ...this.runningExercises!,
+            date: new Date(),
+            state: 'complited'
+        });
     }
 }
