@@ -20,7 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CurrentTrainingComponent } from './current-training/current-training.component';
 import { StopTrainingDialogComponent } from './current-training/stop-training-dialog/stop-training-dialog.component';
 import { AuthServise } from './auth/auth.service';
-import { AuthGuard } from './auth/auth.guard';
+import { TrainingService } from './training/training.service';
 
 @NgModule({
   declarations: [
@@ -50,6 +50,7 @@ import { AuthGuard } from './auth/auth.guard';
   providers: [
     provideAnimationsAsync(),
     AuthServise,
+    TrainingService
   ],
   bootstrap: [AppComponent]
 })
