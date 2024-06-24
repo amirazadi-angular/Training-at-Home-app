@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthServise } from '../auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,12 +8,20 @@ import { NgForm } from '@angular/forms';
   styleUrl: './sign-up.component.css'
 })
 export class SignUpComponent {
-  onSubmit(form : NgForm){
-    console.log(form);
-  }
+
+  constructor(private authServise: AuthServise) { };
+
+  onSubmit(form: NgForm) {
+    this.authServise.regesterUser({
+      email: form.value.email,
+      password: form.value.password
+    })
+  };
+
   hide = signal(true);
   clickEvent(event: MouseEvent) {
     this.hide.set(!this.hide);
     event.stopPropagation();
-  }
+  };
+  
 }

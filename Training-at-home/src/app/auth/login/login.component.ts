@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { AuthServise } from '../auth.service';
 
 @Component({
   selector: 'app-login',
@@ -7,8 +8,14 @@ import { NgForm } from '@angular/forms';
   styleUrl: './login.component.css',
 })
 export class LoginComponent {
+
+  constructor(private authService: AuthServise) { }
+
   onSubmit(form: NgForm) {
-    console.log(form.value);
+    this.authService.login({
+      email: form.value.email,
+      password: form.value.password
+    })
   }
 
   hide = signal(true);

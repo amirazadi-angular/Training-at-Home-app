@@ -7,7 +7,7 @@ import { Imenu } from '../../interface/navarItem.interface';
   styleUrl: './sidenav.component.css',
 })
 export class SidenavComponent {
-  imgUrl: string = 'https://mdbcdn.b-cdn.net/img/new/avatars/8.webp';
+  @Output() imgUrl: string = 'https://mdbcdn.b-cdn.net/img/new/avatars/8.webp';
   name: string = 'Amirhossein';
   level: string = 'Beginner';
 

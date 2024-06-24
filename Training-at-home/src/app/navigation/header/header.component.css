@@ -3,6 +3,7 @@
 }
 img {
   margin-left: 5px;
+  border-radius: 50%;
 }
 .menu {
   padding-top: 10px;
@@ -16,4 +17,15 @@ img {
     flex-direction: column;
     transition: 0.5s !important;
   }
+}
+#logout{
+  background-color: rgba(177, 46, 46, 0.363);
+  color: antiquewhite;
+  > mat-icon{
+    color: aliceblue !important;
+    font-size: 20px;
+  }
+}
+mat-menu{
+  font-size: 16px !important;
 }

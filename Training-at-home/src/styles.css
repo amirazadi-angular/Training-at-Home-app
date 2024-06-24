@@ -85,7 +85,7 @@ html .mat-accent {
 .mdc-line-ripple:active {
   color: #f54611 !important;
 }
-div.mat-mdc-select-panel{
+div.mat-mdc-select-panel {
   background: rgba(246, 93, 0, 0.72) !important;
   border-bottom-right-radius: 20px !important;
   border-bottom-left-radius: 20px !important;
@@ -103,6 +103,16 @@ div.mat-mdc-select-panel{
   padding: 20px;
   background-color: transparent !important;
   border-radius: 20px !important;
+  background: rgba(246, 93, 0, 0.72) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(5.9px) !important;
+  -webkit-backdrop-filter: blur(5.9px) !important;
+}
+.mat-mdc-menu-panel {
+  border-radius: 20px !important;
+  min-width: 135px;
+  max-width: 280px;
   background: rgba(246, 93, 0, 0.72) !important;
   border-radius: 20px !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;

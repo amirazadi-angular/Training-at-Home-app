@@ -1,5 +1,6 @@
 <mat-toolbar>
   <button
+    *ngIf="isAuth"
     (click)="onToggleSidebar()"
     mat-icon-button
     class="example-icon"
@@ -8,13 +9,14 @@
     <mat-icon> menu</mat-icon>
   </button>
   <img [src]="logoUrl" width="80" alt="training at home logo" />
-  <div class="menu" fxHide fxShow.gt-sm>
+  <div *ngIf="isAuth" class="menu" fxHide fxShow.gt-sm>
     <button mat-button *ngFor="let menu of menuArray" [routerLink]="menu.route">
       {{ menu.menuName }}
     </button>
   </div>
   <span class="example-spacer"></span>
   <button
+    *ngIf="!isAuth"
     routerLink="/signup"
     mat-icon-button
     class="example-icon favorite-icon"
@@ -23,6 +25,7 @@
     <mat-icon>person_add</mat-icon>
   </button>
   <button
+    *ngIf="!isAuth"
     routerLink="/login"
     mat-icon-button
     class="example-icon"
@@ -30,4 +33,17 @@
   >
     <mat-icon>login</mat-icon>
   </button>
+  <img
+    *ngIf="isAuth"
+    width="40"
+    mat-button
+    [matMenuTriggerFor]="menu"
+    [src]="imgUrl"
+  />
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item><mat-icon> settings </mat-icon> Setting</button>
+    <button (click)="logOutMembers()" id="logout" mat-menu-item>
+      <mat-icon> logout</mat-icon> Logout
+    </button>
+  </mat-menu>
 </mat-toolbar>

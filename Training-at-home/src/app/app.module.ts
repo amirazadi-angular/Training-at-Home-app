@@ -19,7 +19,9 @@ import { RouteGridComponent } from './main/route-grid/route-grid.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CurrentTrainingComponent } from './current-training/current-training.component';
 import { StopTrainingDialogComponent } from './current-training/stop-training-dialog/stop-training-dialog.component';
- 
+import { AuthServise } from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +48,8 @@ import { StopTrainingDialogComponent } from './current-training/stop-training-di
     ReactiveFormsModule
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    AuthServise,
   ],
   bootstrap: [AppComponent]
 })
