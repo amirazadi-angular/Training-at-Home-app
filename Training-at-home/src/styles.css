@@ -111,8 +111,9 @@ div.mat-mdc-select-panel {
 }
 .mat-mdc-menu-panel {
   border-radius: 20px !important;
-  min-width: 150px;
+  min-width: 150px !important;
   max-width: 280px;
+  margin-top: 5px;
   background: rgba(246, 93, 0, 0.72) !important;
   border-radius: 20px !important;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;

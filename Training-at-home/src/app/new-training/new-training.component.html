@@ -1,33 +1,41 @@
 <div class="container mt-4" fxFlexlayout="column" fxLayoutAlign="center center">
   <div class="row">
-    <mat-card
-      appearance="outlined"
-      fxFlex="400px"
-      fxFlex.xs="100%"
-      fxFlex.sm="100%">
-      <mat-card-header fxLayoutAlign="center center">
-        <mat-card-title>
-          <mat-icon>start</mat-icon> It's time to start</mat-card-title>
-      </mat-card-header>
-      <mat-card-content>
-        <mat-form-field>
-          <mat-label>Select Training</mat-label>
-          <mat-select>
-            <mat-option *ngFor="let sport of trainingArray" [value]="sport.id">
-              {{ sport.name }}
-            </mat-option>
-          </mat-select>
-        </mat-form-field>
-      </mat-card-content>
-      <mat-card-actions fxLayoutAlign="center center">
-        <button
-          (click)="onStartTraining()"
-          class="startButton"
-          type="submit"
-          mat-button>
-          Start
-        </button>
-      </mat-card-actions>
-    </mat-card>
+    <form (ngSubmit)="onStartTraining(f)" #f="ngForm">
+      <mat-card
+        appearance="outlined"
+        fxFlex="400px"
+        fxFlex.xs="100%"
+        fxFlex.sm="100%"
+      >
+        <mat-card-header fxLayoutAlign="center center">
+          <mat-card-title>
+            <mat-icon>start</mat-icon> It's time to start</mat-card-title
+          >
+        </mat-card-header>
+        <mat-card-content>
+          <mat-form-field>
+            <mat-label>Select Training</mat-label>
+            <mat-select ngModel name="exercise" required>
+              <mat-option
+                *ngFor="let sport of trainingArray"
+                [value]="sport.id"
+              >
+                {{ sport.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-card-content>
+        <mat-card-actions fxLayoutAlign="center center">
+          <button
+            class="startButton"
+            type="submit"
+            [disabled]="f.invalid"
+            mat-button
+          >
+            Start
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </form>
   </div>
 </div>

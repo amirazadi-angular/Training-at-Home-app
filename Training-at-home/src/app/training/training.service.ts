@@ -1,6 +1,11 @@
+import { Subject } from 'rxjs';
 import { Iexercise } from '../interface/exercise.interface';
 
 export class TrainingService {
+
+    exerciseChange = new Subject<Iexercise>();
+
+    private runningExercises!: Iexercise;
 
     private availableExercise: Iexercise[] = [
         {
@@ -21,4 +26,10 @@ export class TrainingService {
         return this.availableExercise.slice();
     }
 
+    startExercise(selectedId: string) {
+        this.runningExercises = this.availableExercise.find(
+            (exe) => exe.id === selectedId
+        )!;
+        this.exerciseChange.next({...this.runningExercises})
+    }
 }
