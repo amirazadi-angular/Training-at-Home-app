@@ -21,6 +21,7 @@ import { CurrentTrainingComponent } from './current-training/current-training.co
 import { StopTrainingDialogComponent } from './current-training/stop-training-dialog/stop-training-dialog.component';
 import { AuthServise } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
+import { TrueDatePipe } from './true-date.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { TrainingService } from './training/training.service';
     RouteGridComponent,
     CurrentTrainingComponent,
     StopTrainingDialogComponent,
+    TrueDatePipe,
   ],
   imports: [
     BrowserModule,

@@ -21,7 +21,14 @@ export class TrainingService {
             id: "Burpess", name: "Burpess", duration: 60, calories: 8,
         }
     ];
-    private exercises: Iexercise[] = [];
+    private exercises: Iexercise[] = [
+        {
+            id: "Crunches", name: "Crunches", duration: 30, calories: 8,
+        },
+        {
+            id: "Squat", name: "Squat", duration: 180, calories: 15,
+        },
+    ];
 
     getAvailabeExercises() {
         return this.availableExercise.slice();
