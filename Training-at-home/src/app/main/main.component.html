@@ -15,13 +15,24 @@
         <button mat-flat-button id="button-home-started" routerLink="/signup">
           <mat-icon>start</mat-icon> Get Started
         </button>
-        <button mat-flat-button color="primary" id="button-home-contact">
+        <button
+          (click)="playVideoButton()"
+          mat-flat-button
+          color="primary"
+          id="button-home-contact"
+        >
           <mat-icon>play_circle</mat-icon> Play Video
         </button>
       </div>
     </div>
     <div class="col-md-6 col-sm-12 col-lg-6 col-xs-12" id="Grid-holder">
-      <app-route-grid></app-route-grid>
+      <video *ngIf="playVideo" controls autoplay>
+        <source
+          src="../../assets/bigbuck_bunny_8bit_15000kbps_1080p_60.0fps_h264.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <app-route-grid *ngIf="!playVideo"></app-route-grid>
     </div>
   </div>
 </div>
