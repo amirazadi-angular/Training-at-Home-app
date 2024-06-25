@@ -21,7 +21,7 @@ export class TrainingService {
             id: "Burpess", name: "Burpess", duration: 60, calories: 8,
         }
     ];
-    private complitedExerciseArray: Iexercise[] = [];
+    private exercises: Iexercise[] = [];
 
     getAvailabeExercises() {
         return this.availableExercise.slice();
@@ -39,21 +39,29 @@ export class TrainingService {
     }
 
     cancelExercise(progress: number) {
+        this.exercises.push
+            ({
+                ...this.runningExercises!,
+                date: new Date(),
+                state: 'canceled',
+                duration: this.runningExercises!.duration! * (progress / 100),
+                calories: this.runningExercises!.calories! * (progress / 100)
+            });
         this.runningExercises = null;
         this.exerciseChange.next(null);
-        this.complitedExerciseArray.push
-            ({
-                ...this.runningExercises!, date: new Date(), state: 'canceled',
-                duration: this.runningExercises!.duration! * (progress / 100),
-                calories: this.runningExercises!.duration! * (progress / 100)
-            });
     }
 
     compliteExercise() {
-        this.complitedExerciseArray.push({
+        this.exercises.push({
             ...this.runningExercises!,
             date: new Date(),
             state: 'complited'
         });
+        this.runningExercises = null;
+        this.exerciseChange.next(null);
+    }
+
+    getCompliteOrCancel() {
+        return [...this.exercises]
     }
 }

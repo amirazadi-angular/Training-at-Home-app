@@ -9,17 +9,21 @@ import { TrainingService } from '../training/training.service';
   styleUrl: './current-training.component.css',
 })
 export class CurrentTrainingComponent implements OnInit {
+
   progress: number = 0;
   intervalId: any;
+
   @Output() dialogEvent = new EventEmitter();
 
   trainigName !: string;
+  
   constructor(private dialog: MatDialog, private trainingService: TrainingService) { }
 
   ngOnInit(): void {
     this.startOrResume();
     this.trainigName = this.trainingService.getRuningExercise().name!;
   }
+  
   startOrResume() {
     const increment = this.trainingService.getRuningExercise().duration! / 100 * 1000;
     this.intervalId = setInterval(() => {
