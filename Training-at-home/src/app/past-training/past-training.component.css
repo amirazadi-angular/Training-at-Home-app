@@ -2,3 +2,15 @@ mat-form-field{
     width: 100% !important;
     padding: 20px !important;
 }
+div.mat-mdc-select-panel {
+    background: rgba(246, 93, 0, 0.72) !important;
+    border-top-right-radius: 20px !important;
+    border-top-left-radius: 20px !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+    backdrop-filter: blur(5.9px) !important;
+    -webkit-backdrop-filter: blur(5.9px) !important;
+}
+.mat-mdc-header-row{
+    background-color: #e2e2e252;
+    color: #ec7310;
+}

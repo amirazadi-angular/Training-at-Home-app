@@ -5,14 +5,15 @@
   width: 100%;
   padding: 15px;
   background: #fffe;
+  color: #333 !important;
   border-radius: 14px;
   height: 46px;
   transition: 2s;
 }
 .startButton:hover {
-  background-color: rgb(22, 94, 22);
-  color: aliceblue;
-  box-shadow: rgba(7, 75, 13, 0.897) 0px 50px 100px -20px, rgba(26, 94, 26, 0.726) 0px 30px 60px -30px;
+  background-color: rgb(22, 94, 22) !important;
+  color: aliceblue !important;
+  box-shadow: rgba(7, 75, 13, 0.897) 0px 50px 100px -20px, rgba(26, 94, 26, 0.726) 0px 30px 60px -30px !important;
 }
 mat-card {
   background-color: #333;

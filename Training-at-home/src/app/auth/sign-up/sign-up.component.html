@@ -66,6 +66,7 @@
             #password="ngModel"
           />
           <button
+            type="button"
             mat-icon-button
             matSuffix
             (click)="clickEvent($event)"
@@ -79,7 +80,7 @@
             Password is Required
           </mat-error>
           <mat-error *ngIf="!password.hasError('required')">
-            Password is Invalid
+            At least 6 characters are required
           </mat-error>
         </mat-form-field>
 
@@ -97,6 +98,7 @@
             #Currentpassword="ngModel"
           />
           <button
+            type="button"
             mat-icon-button
             matSuffix
             (click)="clickEvent($event)"
@@ -110,7 +112,7 @@
             Password is Required
           </mat-error>
           <mat-error *ngIf="!password.hasError('required')">
-            Password is Invalid
+            At least 6 characters are required
           </mat-error>
           <mat-hint *ngIf="password.value !== Currentpassword.value">
             Passwords are not same

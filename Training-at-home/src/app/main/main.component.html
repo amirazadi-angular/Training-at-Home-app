@@ -12,16 +12,26 @@
         proident
       </p>
       <div class="example-button-row">
-        <button mat-flat-button id="button-home-started" routerLink="/signup">
+        <button mat-flat-button id="button-home-started" routerLink="/training">
           <mat-icon>start</mat-icon> Get Started
         </button>
         <button
+          *ngIf="!playVideo"
           (click)="playVideoButton()"
           mat-flat-button
           color="primary"
           id="button-home-contact"
         >
           <mat-icon>play_circle</mat-icon> Play Video
+        </button>
+        <button
+          *ngIf="playVideo"
+          (click)="playVideoButton()"
+          mat-flat-button
+          color="primary"
+          id="button-home-contact"
+        >
+          <mat-icon>undo</mat-icon> Back Defult
         </button>
       </div>
     </div>

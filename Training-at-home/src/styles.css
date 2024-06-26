@@ -120,3 +120,6 @@ div.mat-mdc-select-panel {
   backdrop-filter: blur(5.9px) !important;
   -webkit-backdrop-filter: blur(5.9px) !important;
 }
+.mat-mdc-paginator-container{
+  background: #f05c0769 !important;
+}
