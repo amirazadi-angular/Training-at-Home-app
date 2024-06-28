@@ -122,4 +122,5 @@ div.mat-mdc-select-panel {
 }
 .mat-mdc-paginator-container{
   background: #f05c0769 !important;
+  border-radius: 20px !important;
 }
