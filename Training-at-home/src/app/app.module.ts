@@ -22,7 +22,8 @@ import { StopTrainingDialogComponent } from './current-training/stop-training-di
 import { AuthServise } from './auth/auth.service';
 import { TrainingService } from './training/training.service';
 import { TrueDatePipe } from './true-date.pipe';
-
+import { AngularFireModule } from '@angular/fire/compat';
+import { enviroment } from '../environments/enviroment';
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +48,8 @@ import { TrueDatePipe } from './true-date.pipe';
     angularMaterialModule,
     FlexLayoutModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(enviroment.firebase)
   ],
   providers: [
     provideAnimationsAsync(),

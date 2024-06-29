@@ -22,7 +22,7 @@ export class TrainingService {
         }
     ];
     private exercises: Iexercise[] = [
-                {
+        {
             id: "Crunches", name: "Crunches", duration: 30, calories: 8,
         },
         {
