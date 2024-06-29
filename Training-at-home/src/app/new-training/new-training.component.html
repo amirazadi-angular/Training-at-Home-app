@@ -17,7 +17,7 @@
             <mat-label>Select Training</mat-label>
             <mat-select ngModel name="exercise" required>
               <mat-option
-                *ngFor="let sport of trainingArray"
+                *ngFor="let sport of trainingArray | async"
                 [value]="sport.id"
               >
                 {{ sport.name }}
