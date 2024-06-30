@@ -1,7 +1,9 @@
 import { map, Subject } from 'rxjs';
 import { Iexercise } from '../interface/exercise.interface';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class TrainingService {
 
     constructor(private db: AngularFirestore) { };
@@ -12,9 +14,7 @@ export class TrainingService {
 
     private runningExercises!: Iexercise | null;
 
-    private availableExercise: Iexercise[] = [
-
-    ];
+    private availableExercise: Iexercise[] = [];
     private exercises: Iexercise[] = [
         {
             id: "Crunches", name: "Crunches", duration: 30, calories: 8,
@@ -54,7 +54,7 @@ export class TrainingService {
     }
 
     cancelExercise(progress: number) {
-        this.exercises.push
+        this.addDataToDatabase
             ({
                 ...this.runningExercises!,
                 date: new Date(),
@@ -67,7 +67,7 @@ export class TrainingService {
     }
 
     compliteExercise() {
-        this.exercises.push({
+        this.addDataToDatabase({
             ...this.runningExercises!,
             date: new Date(),
             state: 'complited'
@@ -78,5 +78,9 @@ export class TrainingService {
 
     getCompliteOrCancel() {
         return [...this.exercises]
+    }
+
+    private addDataToDatabase(exercise:Iexercise){
+        this.db.collection('finishedExercises').add(exercise);
     }
 }
